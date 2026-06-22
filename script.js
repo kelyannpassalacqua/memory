@@ -110,6 +110,7 @@ function cardclick(currentlyFlippedCard, cardNumber) {
                             confetti();
                             confetti();
                             confetti();
+                            winSound();
                             document.getElementById("tempsFinal").innerText = "Votre temps : " + temps + " secondes";
                             document.getElementById("ecranFin").classList.remove("cache");
                             document.getElementById("btnRejouer").onclick = function () {
@@ -206,5 +207,12 @@ function flipSound() {
     if (flipSound) {
         flipSound.currentTime = 0;
         flipSound.play().catch(error => console.log("Audio playback prevented:", error));
+    }
+}
+function winSound() {
+    const winSound = document.getElementById("win")
+    if (winSound) {
+        winSound.currentTime = 0;
+        winSound.play().catch(error => console.log("Audio playback prevented:", error))
     }
 }

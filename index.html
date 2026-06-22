@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@hiseb/confetti@2.1.0/dist/confetti.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <audio id="cardFlip" src="card-swap.mp3"></audio>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div id="zoneTimer">Temps : 0s</div>
+        <div id="ecranVictoire" class="rideau cache">
+            <div class="modal-texte">
+                <p id="texteDescription"></p>
+                <button id="btnContinuer">Continuer</button>
+            </div>
+        </div>
+        <div id="ecranFin" class="rideau cache">
+            <div class="modal-texte">
+                <p>
+                    <span>🏆 Félicitations ! Vous avez trouvé toutes les paires !</span>
+                    <br>
+                    <span id="tempsFinal">Votre temps : 0 secondes</span> 
+                    <br>
+                    <span id="meilleurScore" style="color: #28a745; font-weight: bold;"></span>
+                </p>
+                <button id="btnRejouer">Rejouer</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
